@@ -1,0 +1,13 @@
+
+
+
+.box{
+    background-color: rgb(27, 26, 26);
+    height: 480px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+

@@ -1,0 +1,52 @@
+
+.container{
+
+    width: 100%;
+    min-width: 100vw;
+    height: 300px;
+    min-height: 100vh;
+  
+    display: flex;
+    align-items: center;
+
+}
+.boxis{
+    width: 300px;
+    height: 270px;
+    display: flex;
+    background: url('../../assets/foto.jpg');
+    background-size:cover;
+    animation: boxis 5s linear infinite ;
+
+}
+                            
+@keyframes boxis{     
+    0%, 100%{
+        border-radius: 60% 60% 70% 14%;
+    }
+    25%{
+        border-radius: 30% 25% 20% 40%;
+    }
+    50%{
+        border-radius: 40%  56% 12% 45%;
+    }
+    75%{
+        border-radius: 20% 70% 21% 40%;
+    }
+}
+
+.box{
+    background-color: rgb(27, 26, 26);
+    height: 480px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* @media (max-width: 631px) {
+    .myphoto {
+        height:100vh;
+        width: 40vw;
+    }
+  } */
