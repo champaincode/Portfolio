@@ -32,7 +32,7 @@ const Header = () => {
        
           {isMatch ? (
             <>
-              <Typography sx={{ fontSize: "2rem", paddingLeft: "10%", fontFamily:"monea" }}>
+              <Typography className="elh1">
                 Edgar Lagos <span>&#160;</span>
               </Typography>
               <DrawerComp />

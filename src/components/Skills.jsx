@@ -23,12 +23,12 @@ const Skills = () => {
   return (
     <>
       <Container
-  
+        //hacer query900 incHeigh = 800px  finHeigh=1000px
         sx={{
           display: "flex",
          
           flexDirection: "column",
-          height: "800px",
+          height: "700px",
           justifyContent: "center",
         }}
       >
@@ -49,13 +49,13 @@ justifyContent={"center"}
       { img.map((imagen,i) => 
 
    
-            <Grid item key={i} xs={4} md={1} sm={6}>
+            <Grid item key={i} xs={5} md={1} sm={4} >
               <motion.img
               src={imagen}
                 initial={{  rotate: 0 ,scale: 1}}
         
                 transition={{ duration: 1}}
-                whileInView={{ rotate: 720,scale: 3, y:100}}
+                whileInView={{ rotate: 720,scale: 2, y:100}}
                 className="movimiento"
                
               />  

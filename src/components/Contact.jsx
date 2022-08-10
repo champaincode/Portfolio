@@ -1,56 +1,89 @@
-import React from 'react'
-import { Typography, Box, Container } from '@mui/material'
-import styles from './styles/portfolio.module.css'
-import { styled } from '@mui/material/styles';
+import React from "react";
+import { Typography, Box, Container } from "@mui/material";
+import styles from "./styles/portfolio.module.css";
+import { styled } from "@mui/material/styles";
+import TextField from "@mui/material/TextField";
+import Paper from "@mui/material/Paper";
+import Grid from "@mui/material/Grid";
 
-import Paper from '@mui/material/Paper';
-import Grid from '@mui/material/Grid';
+import Button from '@mui/material/Button';
 
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-  ...theme.typography.body2,
-  padding: theme.spacing(1),
-  textAlign: 'center',
-  height:"200px",
-  color: theme.palette.text.secondary,
-}));
+
 
 const Contact = () => {
   return (
     <>
-
-    <Container maxWidth      sx={{
-          display:"flex",
-          background: "black",
-          alignContent:"space-around",
-          flexDirection:"column",
+      <Container
+        maxWidth
+        sx={{
+          display: "flex",
+          backgroundColor: "black",
+          alignContent: "space-around",
+          flexDirection: "column",
           height: "800px",
-          justifyContent:"center"
-        
-       }}> <Typography variant="h2" align={"center"} color={'white'}>
-      Contact
-      </Typography>
-    <Box sx={{ display:"flex", justifyContent: "center"}}>
-          <Grid container spacing={2}>
+          justifyContent: "center",
+        }}
+      >
+        {" "}
+        <Typography variant="h2" align={"center"} color={"white"}>
+          Contact
+        </Typography>
+        <Box sx={{ display: "flex", justifyContent: "center" }}>
+          <Box
+            component="form"
+            sx={{
+              "& > :not(style)": {
+                mt: 3,
+                ml: 2,
+                width: "25ch",
+                display: "flex",
+                justifyContent: "center",
+              
+              },
+            }}
+            noValidate
+            autoComplete="off"
+          >
+            <TextField
+              color="secondary"
+              id="standard-basic"
+              label="Name"
+              variant="standard"
+              focused 
            
-            <Grid item xs={12} md={4} sm={12}>
-              <Item> xs=6 md=4 </Item>
-            </Grid>
-            <Grid item xs={12} md={4} sm={12}>
-              <Item><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/200px-Flag_of_Argentina.svg.png" alt="" /></Item>
-            </Grid>
-            <Grid item xs={12} md={4}sm={12}>
-              <Item>xs=6 md=4</Item>
-            </Grid>
-          </Grid>
-        </Box>
-    </Container>
-    
+              className="changeletter"
+            />
+            <TextField
+              color="secondary"
+              id="standard-basic"
+              label="Email Address"
+              variant="standard"
+              focused
+            />
+            <TextField
+              color="secondary"
+              id="standard-basic"
+              label="Phone"
+              variant="standard"
+              focused
+            />
+            <TextField 
+              sx={{color:"white"}}
+          
+              id="outlined-multiline-static"
+              label="Message"
+              color="secondary"
+              multiline
+              rows={4}
+              focused
+            /> <Button variant="contained"    color="secondary">Send</Button>
+          </Box>
        
-      
-        
-       </>
-  )
-}
+       
+        </Box>  
+      </Container>
+    </>
+  );
+};
 
-export default Contact
+export default Contact;

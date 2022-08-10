@@ -31,16 +31,40 @@ const Portfolio = () => {
   Portfolio
   </Typography>
 <Box sx={{ display:"flex", justifyContent: "center"}}>
-      <Grid container spacing={2}>
+      <Grid container align={"center"} spacing={4}>
        
-        <Grid item xs={12} md={4} sm={12}>
-          <Item> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/200px-Flag_of_Argentina.svg.png" alt="" /></Item>
+        <Grid item xs={12} md={3} sm={12}>
+        <div class="card">
+  <div class="card-info">
+    <p class="title">Viewstream</p>
+    <p class="subtitle">TMDB</p>
+  </div>
+  <div class="card-bio">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+</div>
         </Grid>
         <Grid item xs={12} md={4} sm={12}>
-          <Item>xs=6 md=4</Item>
+             <div class="card">
+  <div class="card-info">
+    <p class="title">John Doe</p>
+    <p class="subtitle">Web Dev</p>
+  </div>
+  <div class="card-bio">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+</div>
         </Grid>
         <Grid item xs={12} md={4}sm={12}>
-          <Item>xs=6 md=4</Item>
+        <div class="card">
+  <div class="card-info">
+    <p class="title">John Doe</p>
+    <p class="subtitle">Web Dev</p>
+  </div>
+  <div class="card-bio">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+</div>
         </Grid>
       </Grid>
     </Box>
