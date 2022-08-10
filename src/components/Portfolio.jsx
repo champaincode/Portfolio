@@ -31,7 +31,7 @@ const Portfolio = () => {
   Portfolio
   </Typography>
 <Box sx={{ display:"flex", justifyContent: "center"}}>
-      <Grid container align={"center"} spacing={4}>
+      <Grid container justifyContent={"center"}align={"center"} sx={{marginLeft:"6%"}}>
        
         <Grid item xs={12} md={3} sm={12}>
         <div class="card">
@@ -47,8 +47,8 @@ const Portfolio = () => {
         <Grid item xs={12} md={4} sm={12}>
              <div class="card">
   <div class="card-info">
-    <p class="title">John Doe</p>
-    <p class="subtitle">Web Dev</p>
+    <p class="title">Edlab</p>
+    <p class="subtitle">E-Commerce</p>
   </div>
   <div class="card-bio">
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -58,8 +58,8 @@ const Portfolio = () => {
         <Grid item xs={12} md={4}sm={12}>
         <div class="card">
   <div class="card-info">
-    <p class="title">John Doe</p>
-    <p class="subtitle">Web Dev</p>
+    <p class="title">Coffeels</p>
+    <p class="subtitle">Proyect Professional</p>
   </div>
   <div class="card-bio">
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
