@@ -6,9 +6,10 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
+  Link
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-const pages = ["About me", "Portfolio","Skills" , "Contact"];
+const pages = [{text:"About me", link:"#aboutme"}, {text:"Portfolio", link:"#portfolio"},{text:"Skills", link:"#skills"} ,{text:"Contact", link:"#contact"}];
 const DrawerComp = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
 
@@ -23,7 +24,9 @@ const DrawerComp = () => {
           {pages.map((page, index) => (
             <ListItemButton key={index}>
               <ListItemIcon>
-                <ListItemText>{page}</ListItemText>
+              
+              <Link href={page.link}  color="inherit" underline="always" > <ListItemText>{page.text}</ListItemText> </Link> 
+               
               </ListItemIcon>
             </ListItemButton>
           ))}

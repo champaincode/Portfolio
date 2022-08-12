@@ -19,7 +19,7 @@ const Aboutme = () => {
     <>
       <Container
         maxWidth
-      
+        id={"aboutme"}
         sx={{
      
           height: "600px",
@@ -46,17 +46,14 @@ const Aboutme = () => {
           >
           
               <Box className={styles.boxis}> </Box>
-              {/* <img src={myphoto} width={"100%"} className={styles.myphoto} /> */}
+           
           
             <Grid item sm={6} xs={12}>
             <Typography align={"center"} variant="h2">
                About me
               </Typography>
               <Typography align={"center"} >
-                Lorem Ipsum es simplemente el texto de relleno de las imprentas
-                y archivos de texto. Lorem Ipsum ha sido el texto de relleno
-                estándar de las industrias desde el año 1500, cuando un impresor
-                (N. del T. persona que se dedica a la imprenta) desconocido usó
+             Hi, My name is Edgar lagos. Am Responsible, proactive and with a positive attitude. I like to train myself in what I do, and above all work as a team. As I was doing a course on graphic design I was struck by web development and mobile applications, for this reason, I decided to do the platform 5 bootcamp in order to graduate from full stack my goal is to perfect myself in my favorite area, front end, and enjoy the journey learning and implementing all my acquired knowledge
         
               </Typography>
             </Grid>

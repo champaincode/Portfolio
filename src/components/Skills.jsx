@@ -12,23 +12,25 @@ import react from ".././assets/icons/reaccionar.svg"
 import bootstrap from ".././assets/icons/bootstrap.svg"
 import postgresql from ".././assets/icons/postgresql.svg"
 import sequelize from ".././assets/icons/sequelize.svg"
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const img = [js,react, material,bootstrap, nodejs,postgresql,sequelize]
 const Skills = () => {
-
+  const matches = useMediaQuery("(min-width:900px)");
 
 
 
 
   return (
     <>
-      <Container
+      <Container id={"skills"}
+       className={matches?"incHeigth":"finHeight"}
         //hacer query900 incHeigh = 800px  finHeigh=1000px
         sx={{
           display: "flex",
          
           flexDirection: "column",
-          height: "700px",
+      
           justifyContent: "center",
         }}
       >
@@ -45,6 +47,7 @@ const Skills = () => {
           <Grid 
  container
 justifyContent={"center"}
+
  spacing={20}>
       { img.map((imagen,i) => 
 

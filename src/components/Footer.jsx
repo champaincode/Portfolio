@@ -1,60 +1,56 @@
-import React from 'react'
-import { Typography, Box, Container } from '@mui/material'
+import React from "react";
+import "./Footer.css";
 
-import { styled } from '@mui/material/styles';
-
-import Paper from '@mui/material/Paper';
-import Grid from '@mui/material/Grid';
-import styles from "./styles/skills.module.css"
-
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-  ...theme.typography.body2,
-  padding: theme.spacing(1),
-  textAlign: 'center',
-  height:"200px",
-  color: theme.palette.text.secondary,
-}));
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+    faGithub,
+    faLinkedin,
+    faWhatsapp,
+} from "@fortawesome/free-brands-svg-icons";
+import { faCopyright } from "@fortawesome/free-solid-svg-icons";
 
 const Footer = () => {
-  return (
-    <>
+    return (
+        <footer className="footer" >
+            <div className="footer-container">
+                <div className="item1">
+             
+                </div>
 
-    <Container maxWidth sx={{
-          display:"flex",
-          alignContent:"space-around",
-          flexDirection:"column",
-          height: "150px",
-          justifyContent:"center"
-        
-       }}> <Typography variant="h2" className='Skilles' align={"center"} color={"secondary"}>
-      Footer
-      </Typography>
-    
-     
-      {/* <SpinningText className={styles.spiner}/> */}
-    {/* <Box sx={{ display:"flex", justifyContent: "center"}}>
-          <Grid container spacing={2}>
-           
-            <Grid item xs={12} md={4} sm={12}>
-              <Item> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/200px-Flag_of_Argentina.svg.png" alt="" /></Item>
-            </Grid>
-            <Grid item xs={12} md={4} sm={12}>
-              <Item>xs=6 md=4</Item>
-            </Grid>
-            <Grid item xs={12} md={4}sm={12}>
-              <Item>xs=6 md=4</Item>
-            </Grid>
-          </Grid>
-        </Box> */}
-    </Container>
-    
-       
-      
-        
-       </>
-  )
-}
+                <div className="item2">
+                    <span style={{ paddingRight: 5 }}>Copyright </span>
+                    <FontAwesomeIcon icon={faCopyright} />{" "}
+                    <span style={{ paddingLeft: 5 }}>
+                        {new Date().getFullYear()} Edgar Lagos. All Rights
+                        Reserved.
+                    </span>
+                </div>
+                <a
+                    href="https://github.com/champaincode"
+                    target="_blank"
+                    className="item3"
+                >
+                    <FontAwesomeIcon icon={faGithub} />
+                </a>
+                <a
+                    href="https://www.linkedin.com/in/edgar-lagos/"
+                    target="_blank"
+                    className="item4"
+                >
+                   <FontAwesomeIcon icon={faLinkedin} />
+                </a>
+                <a
+                    href="https://api.whatsapp.com/send?phone=542914400753&text=Hola%20Edgar%20Lagos.%20Me%20interesa%20saber%20m%C3%A1s%20de%20ti%20"
+                    target="_blank"
+                    className="item5"
+                ><FontAwesomeIcon icon={faWhatsapp} />
+                   
+                </a>
 
-export default Footer
+          
+            </div>
+        </footer>
+    );
+};
+
+export default Footer;

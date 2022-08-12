@@ -14,13 +14,14 @@ const Contact = () => {
   return (
     <>
       <Container
+      id={"contact"}
         maxWidth
         sx={{
           display: "flex",
           backgroundColor: "black",
           alignContent: "space-around",
           flexDirection: "column",
-          height: "800px",
+          height: "610px",
           justifyContent: "center",
         }}
       >
