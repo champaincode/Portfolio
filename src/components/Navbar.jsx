@@ -47,29 +47,12 @@ const Header = () => {
                 value={value}
                 onChange={(e, value) => setValue(value)}
               >
-                <Link
-                  href="#aboutme"
-                  color="inherit"
-                  underline="none"
-                  sx={{
-                    "&:active": {
-                      textDecoration: "red",
-                    },
-                  }}
-                >
-                  <Tab label="About me" />
-                </Link>
-                <Link href="#portfolio" color="inherit" underline="hover">
-                  <Tab label="Portfolio" />
-                </Link>
-
-                <Link href="#skills" color="inherit" underline="hover">
-                  <Tab label="Skills" />
-                </Link>
-
-                <Link href="#contact" color="inherit" underline="hover">
-                  <Tab label="Contact" />
-                </Link>
+               
+                  <Tab label="About me"   href="#aboutme"/>
+                  <Tab label="Portfolio"  href="#portfolio"/>
+                  <Tab label="Skills"      href="#skills"  />
+                  <Tab label="Contact" href="#contact" />
+         
               </Tabs>
             </>
           )}

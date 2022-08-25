@@ -25,7 +25,7 @@ const DrawerComp = () => {
             <ListItemButton key={index}>
               <ListItemIcon>
               
-              <Link href={page.link}  color="inherit" underline="always" > <ListItemText>{page.text}</ListItemText> </Link> 
+              <a onClick={() => setOpenDrawer(false)} href={page.link}  > <ListItemText >{page.text}</ListItemText> </a> 
                
               </ListItemIcon>
             </ListItemButton>
