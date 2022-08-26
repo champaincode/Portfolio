@@ -12,20 +12,21 @@ const Portfolio = () => {
   const matches = useMediaQuery("(min-width:900px)");
   return (
     <>
+    
       <Container
         maxWidth
         id="portfolio"
         sx={{
           display: "flex",
           background: "black",
-          alignContent: "space-around",
+      
           flexDirection: "column",
-          height: "800px",
+          height: "700px",
           justifyContent: "center",
         }}
       >
         {" "}
-        <Typography variant="h2" align={"center"} color={"white"}>
+        <Typography variant="h2" ml={3}align={"center"} color={"white"}>
           Portfolio
         </Typography>
         <Box sx={{ display: "flex", justifyContent: "center" }}>
@@ -33,7 +34,7 @@ const Portfolio = () => {
             container
             justifyContent={"center"}
             align={"center"}
-            sx={{ marginLeft: "6%" }}
+            sx={{ marginLeft: "2%" }}
           > 
             <Grid item xs={12} md={3} sm={12}>
             <a href="https://deploy-front-tmdb.vercel.app/">
@@ -47,7 +48,7 @@ const Portfolio = () => {
               </a>
             </Grid>
         
-            <Grid item xs={12} md={3} sm={12}>
+            {/* <Grid item xs={12} md={3} sm={12}>
               <div className={matches?"card":"cardmovil"}>
                 <div className="card-info">
                   <Ecommerce className="svgTmdb" />
@@ -55,13 +56,13 @@ const Portfolio = () => {
                   <p className="title">E-COMMERCE</p>
                 </div>
               </div>
-            </Grid>
+            </Grid> */}
             <Grid item xs={12} md={3} sm={12}>
               <div className={matches?"card":"cardmovil"}>
                 <div className="card-info">
                   <Coffeels className="svgTmdb" />
 
-                  <p className="title">COFFEELS</p>
+                  <p className="title">COFFEELS <br/> Deploy <br/> ¡Coming soon!</p>
                 </div>
               </div>
             </Grid>

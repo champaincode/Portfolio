@@ -19,7 +19,44 @@
     animation: boxis 5s linear infinite ;
 
 }
-                            
+.boxtextph{
+    height:800px;
+}
+
+.boxtextpc{
+   
+    height:270px;
+  
+}
+
+.boxparentPc{
+ 
+}
+
+.containerPh{
+    height: 600px;
+    display:flex !important;
+    justify-content: end;
+    min-height: 50vh;
+}
+
+.containerPc{
+    height: 800px;
+    align-items: center;
+    display:flex;
+    
+    min-height: 20vh;
+}
+.boxparentPc{
+    margin-top: 0px;
+    display: flex;
+    align-items: end;
+}
+.boxparentPh{
+  
+    margin-top: 50px;
+  
+}
 @keyframes boxis{     
     0%, 100%{
         border-radius: 60% 60% 70% 14%;
