@@ -66,27 +66,24 @@ const Skills = () => {
 
   return (
     <>
-     <Typography
+ 
+      <Container
+        id={"skills"}
+        className={matches ? "incHeigth" : "finHeight"}
+
+      >
+           <Typography
           variant="h2"
           className="Skilles"
-          align={"center"}
+          align={"start"}
+          mb={10}
           color={"secondary"}
         >
           Skills
         </Typography>
         
-      <Container
-        id={"skills"}
-        className={matches ? "incHeigth" : "finHeight"}
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-        }}
-      >
        
-       
-          <Grid container justifyContent={"center"} spacing={20}>
+          <Grid container justifyContent={"center"} spacing={20} mb={15}>
             {img.map((imagen, i) => (
               <Grid item key={i} xs={5} md={1} sm={4}>
                 <Link href={imagen.ref}>

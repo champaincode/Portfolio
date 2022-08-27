@@ -12,6 +12,11 @@ import {
 import TypeWriter from "./Typewriter";
 import Link from "@mui/material/Link";
 import DrawerComp from "./Drawer";
+import Aboutme from './Aboutme'
+import Portfolio from './Portfolio';
+import Skills from './Skills';
+import Contact from './Contact';
+import Footer from './Footer';
 
 const typeWriter = ["Edgar Lagos", "Full Stack Developer"];
 
@@ -58,6 +63,13 @@ const Header = () => {
           )}
         </Toolbar>
       </AppBar>
+  <Aboutme/> 
+ <Portfolio/> 
+ <Skills/>
+
+ <Contact/>
+  <Footer/>
+
     </React.Fragment>
   );
 };

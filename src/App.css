@@ -65,6 +65,14 @@
 
 .incHeigth{
   height: 800px;
+  display: flex;
+  justify-items: center;
+}
+.css-1oqqzyl-MuiContainer-root{
+  display: flex !important;
+  align-items: center !important;
+  flex-direction: column;
+  justify-content: center
 }
 
 .finHeight{
@@ -114,7 +122,13 @@
   background: var(--background);
   transition: opacity .5s;
  }
- 
+ .butoncel{
+  width: 30%;
+ }
+
+ .butonpc{
+  width: 60%;
+ }
  .card-info {
   --color: #181818;
   background: var(--color);

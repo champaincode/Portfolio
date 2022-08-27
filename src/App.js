@@ -5,26 +5,20 @@ import {
 
 } from "react-router-dom";
 import Navbar from './components/Navbar';
-import Aboutme from './components/Aboutme'
-import Portfolio from './components/Portfolio';
-import Skills from './components/Skills';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import PostEmail from './components/PostEmail';
 
 function App() {
   return (<>
 
-  <Navbar  />
-  <Aboutme/>
-  <Portfolio/>
+   <Routes>
+   <Route path='/' element={ <Navbar  />}/>
 
-  <Skills/>
-  <Contact/>
-  <Footer/>
-   {/* <Routes>
-    <Route path='/' element={}/>
-    <Route path='/' element={}/>
-   </Routes> */}
+ 
+
+
+    <Route path='/thanks' element={<PostEmail/>}/>
+
+   </Routes>
 
   </>
  
