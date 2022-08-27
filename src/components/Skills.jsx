@@ -76,7 +76,7 @@ const Skills = () => {
           variant="h2"
           className="Skilles"
           align={"center"}
-          mb={10}
+         
           color={"secondary"}
         >
           Skills
