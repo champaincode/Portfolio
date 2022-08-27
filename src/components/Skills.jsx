@@ -75,7 +75,7 @@ const Skills = () => {
            <Typography
           variant="h2"
           className="Skilles"
-          align={"start"}
+          align={"center"}
           mb={10}
           color={"secondary"}
         >
