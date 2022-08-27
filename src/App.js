@@ -5,7 +5,7 @@ import {
 
 } from "react-router-dom";
 import Navbar from './components/Navbar';
-import PostEmail from './components/PostEmail';
+
 
 function App() {
   return (<>
@@ -16,7 +16,6 @@ function App() {
  
 
 
-    <Route path='/thanks' element={<PostEmail/>}/>
 
    </Routes>
 

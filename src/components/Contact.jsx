@@ -7,6 +7,7 @@ import Button from '@mui/material/Button';
 import emailjs from '@emailjs/browser';
 import { useNavigate } from "react-router-dom";
 import SendIcon from '@mui/icons-material/Send';
+import toast, { Toaster } from 'react-hot-toast';
 
 const Contact = () => {
   const navigate = useNavigate()
@@ -18,8 +19,15 @@ const Contact = () => {
     emailjs.sendForm('service_7sy2z93', 'template_ywya11s', form.current, 'NlQoh6jawTPVi3jou')
       .then((result) => {
           console.log(result.text);
+          toast.success('Thanks for contact me, I will reply shortly',{
+            duration: 5000,
+            position: 'top-center',
+        
+            icon: '👏',
+        
+          } )
           e.target.reset()
-          navigate("/esa/"+ form.current.name)
+      
       }, (error) => {
           console.log(error.text);
       });
@@ -41,13 +49,16 @@ const Contact = () => {
           justifyContent: "center",
         }}
       >
-    
+    <Toaster
+  position="top-center"
+  reverseOrder={true}
+/>
         <Typography variant="h2" align={"center"} color={"white"}>
           Contact
         </Typography>
         <Box sx={{ display: "flex", justifyContent: "center" }}>
-        
-        <form ref={form} onSubmit={sendEmail} style={{display:"flex", flexDirection:"column",  alignContent: "space-around",}}>
+       
+        <form ref={form}  onSubmit={sendEmail} style={{display:"flex", flexDirection:"column",  alignContent: "space-around",}}>
             <TextField
             sx={{color:"white",mt:2}}
               color="secondary"
@@ -89,7 +100,7 @@ const Contact = () => {
               multiline
               rows={4}
               focused
-            /> <Button sx={{color:"white",mt:2}} type="submit" value="Send" variant="contained"    color="secondary" endIcon={<SendIcon />}>Send</Button>
+            /> <Button sx={{color:"white",mt:2}}  type="submit" value="Send" variant="contained"    color="secondary" endIcon={<SendIcon />}>Send</Button>
             </form>
           </Box>
        
