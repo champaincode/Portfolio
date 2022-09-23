@@ -1,16 +1,15 @@
 import {useRef} from "react";
 import { Typography, Box, Container } from "@mui/material";
-import styles from "./styles/portfolio.module.css";
-import { styled } from "@mui/material/styles";
 import TextField from "@mui/material/TextField"
 import Button from '@mui/material/Button';
 import emailjs from '@emailjs/browser';
-import { useNavigate } from "react-router-dom";
 import SendIcon from '@mui/icons-material/Send';
 import toast, { Toaster } from 'react-hot-toast';
-
+import {
+  useTranslation
+} from "react-i18next"
 const Contact = () => {
-  const navigate = useNavigate()
+  const[t, i18n] = useTranslation("global")
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -54,7 +53,7 @@ const Contact = () => {
   reverseOrder={true}
 />
         <Typography variant="h2" align={"center"} color={"white"}>
-          Contact
+        {t("contact.contact")} 
         </Typography>
         <Box sx={{ display: "flex", justifyContent: "center" }}>
        

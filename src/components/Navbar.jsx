@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import {
+  useTranslation
+} from "react-i18next"
+import {
   AppBar,
   Tab,
   Tabs,
@@ -8,9 +11,11 @@ import {
   useMediaQuery,
   useTheme,
   Box,
+
+
 } from "@mui/material";
 import TypeWriter from "./Typewriter";
-import Link from "@mui/material/Link";
+
 import DrawerComp from "./Drawer";
 import Aboutme from './Aboutme'
 import Portfolio from './Portfolio';
@@ -22,7 +27,7 @@ const typeWriter = ["Edgar Lagos", "Full Stack Developer"];
 
 const Header = () => {
   const [value, setValue] = useState();
-
+  const[t, i18n] = useTranslation("global")
   const theme = useTheme();
   const isMatch = useMediaQuery(theme.breakpoints.down("md"));
 
@@ -53,11 +58,12 @@ const Header = () => {
                 onChange={(e, value) => setValue(value)}
               >
                
-                  <Tab label="About me"   href="#aboutme"/>
-                  <Tab label="Portfolio"  href="#portfolio"/>
-                  <Tab label="Skills"      href="#skills"  />
-                  <Tab label="Contact" href="#contact" />
-         
+                  <Tab label={t("navbar.about-me")}  href="#aboutme"/>
+                  <Tab label={t("navbar.portfolio")}  href="#portfolio"/>
+                  <Tab label={t("navbar.skills")}     href="#skills"  />
+                  <Tab label={t("navbar.contact")}  href="#contact" />
+                 
+                
               </Tabs>
             </>
           )}

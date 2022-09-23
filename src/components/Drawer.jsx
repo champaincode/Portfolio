@@ -6,7 +6,6 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
-  Link
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 const pages = [{text:"About me", link:"#aboutme"}, {text:"Portfolio", link:"#portfolio"},{text:"Skills", link:"#skills"} ,{text:"Contact", link:"#contact"}];

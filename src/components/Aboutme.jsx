@@ -1,20 +1,16 @@
 import React from "react";
-import { Typography, Box, Container } from "@mui/material";
-import { styled } from "@mui/material/styles";
+import { Typography, Box, Container, Button } from "@mui/material";
 import Grid from "@mui/material/Grid";
-import Paper from "@mui/material/Paper";
 import styles from "./styles/aboutme.module.css";
 import useMediaQuery from "@mui/material/useMediaQuery";
-
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
-  ...theme.typography.body2,
-  padding: theme.spacing(1),
-  textAlign: "center",
-  color: theme.palette.text.secondary,
-}));
+import {
+  useTranslation
+} from "react-i18next"
+import es from "../flags/espana (1).png"
+import en from "../flags/reino-unido.png"
 
 const Aboutme = () => {
+  const[t, i18n] = useTranslation("global")
   const matches = useMediaQuery("(min-width:638px)");
   const query = useMediaQuery("(min-width:638px)");
   const queryContainer = useMediaQuery("(min-width:638px)");
@@ -27,6 +23,7 @@ const Aboutme = () => {
           queryContainer ? `${styles.containerPh}` : `${styles.containerPc}`
         }
       >
+          
         <Box
           sx={{
             display: "flex",
@@ -36,6 +33,7 @@ const Aboutme = () => {
             width: "100%",
           }}
         >
+      
           <Grid
             container
             display={"flex"}
@@ -50,26 +48,23 @@ const Aboutme = () => {
             >
               <Box className={styles.boxis}> </Box>
             </Box>
-
+           
             <Grid item sm={6} xs={12}>
               <Box
                 className={
                   query ? `${styles.boxtextpc}` : `${styles.boxtextph}`
                 }
-              >
+              > 
+                 <Box sx={{display:"flex", justifyContent:"end"}}> 
+                <Button onClick={() => i18n.changeLanguage("es")}><img  className="ES" src={es} alt="" />  </Button>
+              <Button onClick={() => i18n.changeLanguage("en")}> <img  className="EN" src={en} alt="" /></Button>
+              </Box>
                 <Typography align={"center"} variant="h2">
-                  About me
+                {t("aboutme.aboutme")}
                 </Typography>
-
+                
                 <Typography align={"center"}>
-                  Hi, I'am Edgar Lagos. I consider myselft as a responsible,
-                  proactive and positive person. I learn new things all the
-                  time, and I enjoy working as a team. I studied a course on
-                  graphical design and that's why I decided to focus more on web
-                  development. A few months later, I took a course on Plataforma
-                  5 to become a Full Stack Developer. My goals are to work as a
-                  Front-End Developer, join the path and apply everything I
-                  know.
+                {t("aboutme.text")}
                 </Typography>
               </Box>
             </Grid>

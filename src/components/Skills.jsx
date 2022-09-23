@@ -1,9 +1,6 @@
 import React from "react";
 import { Typography, Box, Container, Link } from "@mui/material";
-import { styled } from "@mui/material/styles";
-import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
-import styles from "./styles/skills.module.css";
 import { motion, useScroll } from "framer-motion";
 import nodejs from ".././assets/icons/node-js.svg";
 import js from ".././assets/icons/javascript.svg";
@@ -14,8 +11,9 @@ import postgresql from ".././assets/icons/postgresql.svg";
 import sequelize from ".././assets/icons/sequelize.svg";
 import github from ".././assets/icons/github.svg"
 import useMediaQuery from "@mui/material/useMediaQuery";
-import DeleteIcon from "@mui/icons-material/Delete";
-import IconButton from "@mui/material/IconButton";
+import {
+  useTranslation
+} from "react-i18next"
 import Tooltip from "@mui/material/Tooltip";
 
 const img = [
@@ -63,7 +61,7 @@ const img = [
 ];
 const Skills = () => {
   const matches = useMediaQuery("(min-width:900px)");
-
+  const[t, i18n] = useTranslation("global")
   return (
     <>
  
@@ -79,7 +77,7 @@ const Skills = () => {
          
           color={"secondary"}
         >
-          Skills
+          {t("skills.text")}
         </Typography>
         
        

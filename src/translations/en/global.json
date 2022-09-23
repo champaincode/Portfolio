@@ -1,0 +1,21 @@
+{
+  "navbar": {
+    "about-me": "About me",
+    "portfolio": "Portfolio",
+    "skills": "Skills",
+    "contact": "Contatct"
+  },
+
+  "aboutme": {
+    "aboutme": "About me",
+    "text": "Hi, I'am Edgar Lagos. I consider myselft as a responsible, proactive and positive person. I learn new things all the time, and I enjoy working as a team. I studied a course on graphical design and that's why I decided to focus more on web development. A few months later, I took a course on Plataforma 5 to become a Full Stack Developer. My goals are to work as a Front-End Developer, join the path and apply everything I know."
+  },"portfolio":{
+    "text":"Portfolio"
+},
+    "skills":{
+        "text":"Skills"
+    },
+    "contact":{
+        "contact":"Contact"
+    }
+}

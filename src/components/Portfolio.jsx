@@ -5,11 +5,14 @@ import Grid from "@mui/material/Grid";
 import Tmdbsvg from "./Tmdbsvg";
 import Coffeels from "./Coffeels";
 import Morty from "./Morty"
-import Ecommerce from "./Ecommerce";
+import {
+  useTranslation
+} from "react-i18next"
 import useMediaQuery from "@mui/material/useMediaQuery";
 
 const Portfolio = () => {
   const matches = useMediaQuery("(min-width:900px)");
+  const[t, i18n] = useTranslation("global")
   return (
     <>
     
@@ -27,7 +30,7 @@ const Portfolio = () => {
       >
         {" "}
         <Typography variant="h2" ml={3}align={"center"} color={"white"}>
-          Portfolio
+        {t("portfolio.text")} 
         </Typography>
         <Box sx={{ display: "flex", justifyContent: "center" }}>
           <Grid

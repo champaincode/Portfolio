@@ -5,7 +5,7 @@
     min-width: 100vw;
     height: 300px;
     min-height: 100vh;
-  
+
     display: flex;
     align-items: center;
 
@@ -38,6 +38,7 @@
     display:flex !important;
     justify-content: end;
     min-height: 50vh;
+
 }
 
 .containerPc{
