@@ -9,15 +9,16 @@
     "aboutme": "Sobre mi",
     "text": "Hola, Soy Edgar Lagos. Me considero responsable, proactivo y una persona positiva. Estoy aprendiendo cosas todo el tiempo, y disfruto trabajando en equipo. Estudié un curso de diseño gráfico y por eso decidí centrarme más en el desarrollo web. Unos meses después, tomé un curso en Plataforma 5 para convertirme en un desarrollador de Full Stack. Mis objetivos son trabajar como desarrollador Front-End, unirme al camino y aplicar todo lo que sé."
   },
-  "portfolio":{
-    "text":"Portafolio"
-},
-  "skills":{
-      "text":"Habilidades"
+  "portfolio": {
+    "text": "Portafolio"
   },
-  "contact":{
-      "contact":"Contacto"
+  "skills": {
+    "text": "Habilidades"
+  },
+  "contact": {
+    "contact": "Contacto"
+  },
+  "demo": {
+    "demo": "Ver Demo"
   }
-
-
 }

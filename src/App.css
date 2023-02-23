@@ -139,6 +139,7 @@
   width: 60%;
  }
  .card-info {
+ 
   --color: #181818;
   background: var(--color);
   color: var(--color);
@@ -152,6 +153,7 @@
   overflow: visible;
   border-radius: .7rem;
   display: flex;
+  
 flex-direction: column;
  }
  
