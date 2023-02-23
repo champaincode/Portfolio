@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Typography, Box, Container, Button } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import styles from "./styles/aboutme.module.css";
@@ -12,6 +12,23 @@ const Aboutme = () => {
   const matches = useMediaQuery("(min-width:638px)");
   const query = useMediaQuery("(min-width:638px)");
   const queryContainer = useMediaQuery("(min-width:638px)");
+
+  // Función para guardar el idioma seleccionado en el localstorage
+  const handleLanguageChange = (language) => {
+    i18n.changeLanguage(language);
+    localStorage.setItem("language", language);
+  };
+
+  // Obtener el idioma guardado en el localstorage, si no hay ninguno usar el idioma por defecto
+  const savedLanguage = localStorage.getItem("language") || "en";
+
+  // Establecer el idioma seleccionado previamente si existe
+  useEffect(() => {
+    if (savedLanguage) {
+      i18n.changeLanguage(savedLanguage);
+    }
+  }, [savedLanguage, i18n]);
+
   return (
     <>
       <Container
@@ -52,10 +69,10 @@ const Aboutme = () => {
                 }
               >
                 <Box sx={{ display: "flex", justifyContent: "end" }}>
-                  <Button onClick={() => i18n.changeLanguage("es")}>
+                  <Button onClick={() => handleLanguageChange("es")}>
                     <img className="ES" src={es} alt="" />{" "}
                   </Button>
-                  <Button onClick={() => i18n.changeLanguage("en")}>
+                  <Button onClick={() => handleLanguageChange("en")}>
                     {" "}
                     <img className="EN" src={en} alt="" />
                   </Button>

@@ -11,6 +11,7 @@ import {
   BrowserRouter 
   
 } from "react-router-dom";
+
 i18next.init({
   interpolation:{
     escapeValue:false

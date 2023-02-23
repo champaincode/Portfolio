@@ -7,9 +7,14 @@ import {
   ListItemIcon,
   ListItemText,
 } from "@mui/material";
+import {
+  useTranslation
+} from "react-i18next"
 import MenuIcon from "@mui/icons-material/Menu";
+
 const pages = [{text:"About me", link:"#aboutme"}, {text:"Portfolio", link:"#portfolio"},{text:"Skills", link:"#skills"} ,{text:"Contact", link:"#contact"}];
 const DrawerComp = () => {
+  const[t, i18n] = useTranslation("global")
   const [openDrawer, setOpenDrawer] = useState(false);
 
   return (
