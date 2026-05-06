@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0a0a0a" />
+
+    <!-- ══════════════════════════════════════════════════════════
+         📄 SEO — Primary Meta Tags
+         ══════════════════════════════════════════════════════════ -->
+    <title>Edgar Lagos — FullStack Developer | React · Next.js · Node.js</title>
+    <meta name="title"       content="Edgar Lagos — FullStack Developer | React · Next.js · Node.js" />
+    <meta name="description" content="Edgar Lagos, FullStack Developer especializado en React, Next.js, Node.js y desarrollo web moderno. Disponible para proyectos freelance." />
+    <meta name="author"      content="Edgar Lagos" />
+    <meta name="robots"      content="index, follow" />
+    <link rel="canonical"    href="https://edgarlagos.dev/" />
+
+    <!-- ══════════════════════════════════════════════════════════
+         📱 Open Graph / Facebook / LinkedIn
+         ══════════════════════════════════════════════════════════ -->
+    <meta property="og:type"        content="website" />
+    <meta property="og:url"         content="https://edgarlagos.dev/" />
+    <meta property="og:title"       content="Edgar Lagos — FullStack Developer" />
+    <meta property="og:description" content="FullStack Developer especializado en React, Next.js, Node.js y desarrollo web moderno. Disponible para proyectos freelance." />
+    <meta property="og:image"       content="https://edgarlagos.dev/og-image.jpg" />
+    <meta property="og:image:alt"   content="Edgar Lagos — FullStack Developer" />
+    <meta property="og:locale"      content="es_ES" />
+    <meta property="og:site_name"   content="Edgar Lagos Portfolio" />
+
+    <!-- ══════════════════════════════════════════════════════════
+         🐦 Twitter Card
+         ══════════════════════════════════════════════════════════ -->
+    <meta name="twitter:card"        content="summary_large_image" />
+    <meta name="twitter:url"         content="https://edgarlagos.dev/" />
+    <meta name="twitter:title"       content="Edgar Lagos — FullStack Developer" />
+    <meta name="twitter:description" content="FullStack Developer especializado en React, Next.js, Node.js y desarrollo web moderno." />
+    <meta name="twitter:image"       content="https://edgarlagos.dev/og-image.jpg" />
+    <meta name="twitter:image:alt"   content="Edgar Lagos — FullStack Developer" />
+
+    <!-- ══════════════════════════════════════════════════════════
+         🔒 SECURITY HEADERS
+         ══════════════════════════════════════════════════════════ -->
+
+    <!-- Content Security Policy: whitelist de fuentes permitidas -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="
+        default-src 'self';
+        script-src 'self' 'unsafe-inline';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+        font-src 'self' https://fonts.gstatic.com;
+        img-src 'self' data: blob:
+          https://flagcdn.com
+          https://upload.wikimedia.org;
+        connect-src 'self';
+        frame-src 'none';
+        object-src 'none';
+        base-uri 'self';
+        form-action 'self';
+        upgrade-insecure-requests;
+      "
+    />
+
+    <!-- Evita MIME-type sniffing -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+
+    <!-- No enviar Referer a dominios externos -->
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <!-- Deshabilita DNS prefetch no autorizado -->
+    <meta http-equiv="x-dns-prefetch-control" content="off" />
+
+    <!-- Previene clickjacking (navegadores legacy) -->
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+
+    <!-- ══════════════════════════════════════════════════════════
+         ⚡ PERFORMANCE — Preconnect / DNS-prefetch / Preload
+         ══════════════════════════════════════════════════════════ -->
+
+    <!-- Preconnect para fuentes (conexión CORS anticipada) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+
+    <!-- DNS prefetch para imágenes de banderas -->
+    <link rel="dns-prefetch" href="https://flagcdn.com" />
+
+    <!-- Google Fonts con display=swap (evita FOIT) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aldrich&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700&family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+
+    <!-- ══════════════════════════════════════════════════════════
+         🧠 STRUCTURED DATA — Schema.org Person
+         ══════════════════════════════════════════════════════════ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Edgar Lagos",
+      "givenName": "Edgar",
+      "familyName": "Lagos",
+      "jobTitle": "FullStack Developer",
+      "url": "https://edgarlagos.dev",
+      "email": "edgarlagos.355@gmail.com",
+      "sameAs": [
+        "https://www.linkedin.com/in/edgar-lagos/",
+        "https://github.com/champaincode"
+      ],
+      "knowsAbout": [
+        "React", "Next.js", "Node.js", "TypeScript",
+        "WordPress", "UI/UX Design", "SEO"
+      ],
+      "knowsLanguage": ["es", "en", "ca", "de", "fr", "it"],
+      "offers": {
+        "@type": "Offer",
+        "description": "Desarrollo web freelance — React, Next.js, WordPress"
+      }
+    }
+    </script>
+  </head>
+  <body>
+    <noscript
+      >Para usar esta aplicación es necesario habilitar JavaScript.</noscript
+    >
+    <div id="root"></div>
+    <script type="module" src="/src/index.jsx"></script>
+  </body>
+</html>

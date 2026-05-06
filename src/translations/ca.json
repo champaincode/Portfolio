@@ -1,0 +1,63 @@
+{
+  "aboutme": "Sobre mi",
+  "text.aboutme": "Sóc un desenvolupador apassionat per la innovació i l'enginyeria de programari. M'especialitze en construir solucions escalables i eficients, prenent decisions tècniques estratègiques. Fomente la col·laboració efectiva i aporte experiència en metodologies àgils.",
+  "text.aboutme.about": "Sobre mi",
+  "text.aboutme.tittle": "Sóc Desenvolupador FullStack amb +4 anys d'experiència",
+  "text.aboutme.description": "Hola, sóc Edgar Lagos. Des dels meus inicis al 2022, he evolucionat professionalment dominant l'ecosistema JavaScript modern i arquitectures Full Stack. El meu background en disseny gràfic em permet tenir una visió integral del producte. Hui en dia, m'enfoque en entregar codi net, optimitzat i d'alt rendiment, treballant amb metodologies àgils per resoldre problemes complexos de negoci.",
+  "text.porfolio": "El meu Portafolis",
+  "Responsible": "Responsable",
+  "Dedicated": "Dedicat",
+  "Passionate": "Apassionat",
+  "text.skills": "Habilitats",
+  "text.services": "Quines tecnologies utilitze?",
+  "text.services.description": "Durant aquest període, he explorat una varietat de tecnologies. A continuació, en presente algunes.",
+  "contact": "Contacte",
+  "downloadCv": "Descarregar CV",
+  "skills.title": "Tecnologies que Domine",
+  "skills.subtitle": "El Meu Stack Tecnològic",
+  "skills.description": "Un conjunt d'eines i metodologies que em permeten crear solucions digitals completes i eficients.",
+
+  "skill.ai.title": "Vibe Coding & AI Ops",
+  "skill.ai.desc": "Prompt Engineering avançat, implementació d'APIs (OpenAI, Gemini), automatització de fluxos de treball (n8n, Zapier) i creació d'Agents/Xatbots personalitzats.",
+  
+  "skill.frontend.title": "Desenvolupament Frontend & Frameworks",
+  "skill.frontend.desc": "JavaScript (ES6+), TypeScript, React, Next.js, Redux, Material UI, Tailwind CSS.",
+  
+  "skill.wordpress.title": "Ecosistema WordPress",
+  "skill.wordpress.desc": "Desenvolupament expert amb Elementor, optimització de rendiment i personalització de llocs per a sectors específics (Restauració/Retail).",
+  
+  "skill.backend.title": "Backend & Bases de Dades",
+  "skill.backend.desc": "Node.js, PostgreSQL, MongoDB, Sequelize, Mongoose.",
+  
+  "skill.pos.title": "Sistemes i TPV",
+  "skill.pos.desc": "Integració de sistemes de punt de venda (TPV) i protocols de comunicació per a aplicacions de gestió comercial.",
+  
+  "skill.tools.title": "Eines d'Entorn",
+  "skill.tools.desc": "Git, Docker, metodologies Àgils (Scrum), Pair Programming.",
+  
+  "skill.lang.title": "Idiomes",
+  "skill.lang.desc": "Espanyol (Natiu), Anglès (A2 - millorant activament per a documentació tècnica).",
+  "text.see.my.work": "Els meus treballs",
+  "text.work": "ALGUNS DELS MEUS ÚLTIMS TREBALLS",
+  "text.work.description": "Els meus projectes són molt importants per a mi, per això sempre dedique el màxim esforç per deixar-los en les millors condicions possibles.",
+  "Coffeels": "Coffeels en React",
+  "WeatherApp": "App del Temps en TypeScript",
+  "ecommerce": "E-comerç amb Next.js",
+  "text.contact": "Posa't en contacte",
+  "text.contact.one": "Treballem junts!",
+  "text.your.name": "El teu nom",
+  "text.your.email": "El teu email",
+  "text.your.message": "El teu missatge",
+  "text.service4.link": "Veure",
+  
+  "buttonForm": "Enviar missatge",
+  "text.status": "Missatge Enviat!",
+  "demo": "Veure Demo",
+  "Iam": "Jo sóc",
+  "buttonText": "Canviar Llengua",
+  "role.fullstack": "FullStack",
+  "role.developer": "Desenvolupador",
+  "role.freelance": "Freelance",
+  "salvatore": "Salvatore amb Wordpress",
+  "borsalino": "Il Borsalino amb redesing"
+}

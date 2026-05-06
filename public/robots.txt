@@ -1,0 +1,11 @@
+# robots.txt — Edgar Lagos Portfolio
+# https://edgarlagos.dev
+
+User-agent: *
+Allow: /
+
+# Disallow dev/build artifacts if accidentally deployed
+Disallow: /src/
+Disallow: /node_modules/
+
+Sitemap: https://edgarlagos.dev/sitemap.xml

@@ -1,0 +1,72 @@
+{
+  "aboutme": "About me",
+
+  "text.aboutme": "I am a developer passionate about innovation and software engineering. I specialize in building scalable and efficient solutions, making strategic technical decisions. I foster effective collaboration and bring experience in agile methodologies.",
+  "text.aboutme.about": "About me",
+  "text.aboutme.tittle": "I'm a FullStack Developer with +4 years of experience",
+  "text.aboutme.description": "Hi, I'm Edgar Lagos. Since starting in 2022, I have professionally evolved by mastering the modern JavaScript ecosystem and Full Stack architectures. My background in graphic design allows me to have a comprehensive vision of the product. Today, I focus on delivering clean, optimized, and high-performance code, working with agile methodologies to solve complex business problems.",
+  "text.porfolio": "My Portfolio",
+
+  "Responsible": "Responsible",
+  "Dedicated": "Dedicated",
+  "Passionate": "Passionate",
+  "text.skills": "Skills",
+  "text.services": "Which technologies do I use?",
+  "text.services.description": " During this period, I have been exploring a variety of different technologies. Below, I will introduce you to some of them.",
+
+  "contact": "Contact me",
+  "downloadCv": "Download Cv",
+
+  "skills.title": "Technologies I Master",
+  "skills.subtitle": "My Tech Stack",
+  "skills.description": "A set of tools and methodologies that allow me to create complete and efficient digital solutions.",
+
+  "skill.ai.title": "Vibe Coding & AI Ops",
+  "skill.ai.desc": "Advanced Prompt Engineering, API implementation (OpenAI, Gemini), workflow automation (n8n, Zapier), and custom Agents/Chatbots creation.",
+  
+  "skill.frontend.title": "Frontend Development & Frameworks",
+  "skill.frontend.desc": "JavaScript (ES6+), TypeScript, React, Next.js, Redux, Material UI, Tailwind CSS.",
+  
+  "skill.wordpress.title": "WordPress Ecosystem",
+  "skill.wordpress.desc": "Expert development with Elementor, performance optimization, and site customization for specific sectors (Restaurant/Retail).",
+  
+  "skill.backend.title": "Backend & Databases",
+  "skill.backend.desc": "Node.js, PostgreSQL, MongoDB, Sequelize, Mongoose.",
+  
+  "skill.pos.title": "Systems & POS",
+  "skill.pos.desc": "Integration of Point of Sale (POS) systems and communication protocols for commercial management applications.",
+  
+  "skill.tools.title": "Environment Tools",
+  "skill.tools.desc": "Git, Docker, Agile methodologies (Scrum), Pair Programming.",
+  
+  "skill.lang.title": "Languages",
+  "skill.lang.desc": "Spanish (Native), English (A2 - actively improving for technical documentation).",
+
+  "text.see.my.work": "See my work",
+  "text.work": "SOME OF MY LATEST WORKS",
+  "text.work.description": "My projects are of great importance to me, so I always dedicate my maximum effort to ensure they are left in the best possible condition. To achieve this, I spare no time or resources.",
+
+  "Coffeels": "Coffeels in React",
+  "WeatherApp": "Weather App On Typescript",
+  "ecommerce": "E-commerce with Next js ",
+
+  "text.contact": "Get in touch",
+  "text.contact.one": " Let's work  together!",
+
+  "text.your.name": "Your name",
+  "text.your.email": "Your email",
+  "text.your.message": "Your message",
+  "buttonForm": "Send message",
+  "text.status": "Message Sent !",
+
+  "demo": "View Demo",
+  "Iam": "I am",
+
+  "buttonText": "Change Language",
+  "role.fullstack": "FullStack",
+  "role.developer": "Developer",
+  "role.freelance": "Freelance",
+  "salvatore": "Salvatore with Wordpress",
+  "borsalino": "Il Borsalino with redesing",
+  "text.service4.name": "Digitalencia collaboration with Santiago Rodriguez"
+}

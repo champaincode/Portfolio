@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Edgar Lagos — Sviluppatore Full Stack</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --ink: #1a1a1a;
+    --mid: #4a4a4a;
+    --light: #8a8a8a;
+    --rule: #d4d0c8;
+    --accent: #1e4d6b;
+    --accent2: #c8a84b;
+    --bg: #f7f5f0;
+    --white: #ffffff;
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    font-size: 13.5px;
+    line-height: 1.6;
+  }
+
+  .page {
+    max-width: 960px;
+    margin: 40px auto;
+    background: var(--white);
+    box-shadow: 0 8px 60px rgba(0,0,0,0.12);
+    display: grid;
+    grid-template-columns: 270px 1fr;
+    min-height: 100vh;
+  }
+
+  /* ─── SIDEBAR ─── */
+  .sidebar {
+    background: var(--accent);
+    color: #fff;
+    padding: 48px 28px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+  }
+
+  .sidebar-header {
+    text-align: center;
+  }
+
+  .avatar-ring {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 3px solid var(--accent2);
+    margin: 0 auto 20px;
+    overflow: hidden;
+    background: #2c6a8e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'DM Serif Display', serif;
+    font-size: 36px;
+    color: var(--accent2);
+    letter-spacing: 1px;
+  }
+
+  .sidebar-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px;
+    line-height: 1.2;
+    color: #fff;
+    margin-bottom: 6px;
+  }
+
+  .sidebar-title {
+    font-size: 11.5px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent2);
+  }
+
+  .divider-gold {
+    width: 40px;
+    height: 2px;
+    background: var(--accent2);
+    margin: 14px auto 0;
+  }
+
+  .sidebar-section-title {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--accent2);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .sidebar-section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(200,168,75,0.3);
+  }
+
+  .contact-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .contact-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12.5px;
+    color: rgba(255,255,255,0.85);
+  }
+
+  .contact-list li .ico {
+    width: 22px;
+    height: 22px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 11px;
+  }
+
+  .skill-block { margin-bottom: 4px; }
+
+  .skill-name {
+    font-size: 12px;
+    color: rgba(255,255,255,0.9);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+
+  .skill-bar-bg {
+    height: 3px;
+    background: rgba(255,255,255,0.12);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  .skill-bar-fill {
+    height: 100%;
+    background: var(--accent2);
+    border-radius: 2px;
+  }
+
+  .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .tag {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.15);
+    color: rgba(255,255,255,0.85);
+    font-size: 11px;
+    padding: 3px 9px;
+    border-radius: 20px;
+  }
+
+  .lang-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    font-size: 12.5px;
+    color: rgba(255,255,255,0.85);
+  }
+
+  .lang-level {
+    font-size: 10.5px;
+    color: var(--accent2);
+    font-weight: 500;
+  }
+
+  /* ─── MAIN ─── */
+  .main {
+    padding: 48px 44px 48px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+  }
+
+  .main-header {
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: 20px;
+  }
+
+  .main-header h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 38px;
+    line-height: 1.1;
+    color: var(--ink);
+    letter-spacing: -0.5px;
+  }
+
+  .main-header h1 em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  .main-header .role-tag {
+    display: inline-block;
+    margin-top: 8px;
+    background: var(--ink);
+    color: var(--white);
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 4px 14px;
+  }
+
+  .section-title {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .section-title::after {
+    content: '';
+    flex: 1;
+    height: 1.5px;
+    background: var(--rule);
+  }
+
+  .about-text {
+    color: var(--mid);
+    line-height: 1.75;
+    font-size: 13.5px;
+  }
+
+  /* Experience */
+  .exp-item {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 0 20px;
+    margin-bottom: 26px;
+    position: relative;
+  }
+
+  .exp-item:not(:last-child)::before {
+    content: '';
+    position: absolute;
+    left: 90px;
+    top: 28px;
+    bottom: -10px;
+    width: 1px;
+    background: var(--rule);
+    margin-left: 10px;
+  }
+
+  .exp-date {
+    font-size: 11px;
+    color: var(--light);
+    font-weight: 500;
+    padding-top: 3px;
+    text-align: right;
+    line-height: 1.4;
+  }
+
+  .exp-dot {
+    position: absolute;
+    left: 90px;
+    top: 5px;
+    width: 9px;
+    height: 9px;
+    background: var(--accent2);
+    border-radius: 50%;
+    margin-left: 7px;
+  }
+
+  .exp-body { padding-left: 24px; }
+
+  .exp-company {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  .exp-role {
+    font-size: 14.5px;
+    font-weight: 600;
+    color: var(--ink);
+    margin: 2px 0 6px;
+    font-family: 'DM Serif Display', serif;
+  }
+
+  .exp-desc {
+    color: var(--mid);
+    font-size: 13px;
+    line-height: 1.65;
+  }
+
+  .exp-tags {
+    margin-top: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .exp-tag {
+    background: #eef2f6;
+    color: var(--accent);
+    font-size: 10.5px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 3px;
+  }
+
+  /* Education */
+  .edu-item {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 0 20px;
+    margin-bottom: 20px;
+  }
+
+  .edu-date {
+    font-size: 11px;
+    color: var(--light);
+    font-weight: 500;
+    padding-top: 2px;
+    text-align: right;
+  }
+
+  .edu-body {
+    padding-left: 0;
+    border-left: 3px solid var(--accent2);
+    padding-left: 14px;
+  }
+
+  .edu-inst {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--light);
+  }
+
+  .edu-degree {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--ink);
+    font-family: 'DM Serif Display', serif;
+    margin: 2px 0 4px;
+  }
+
+  .edu-desc {
+    color: var(--mid);
+    font-size: 12.5px;
+    line-height: 1.55;
+  }
+
+  .exp-bullets {
+    list-style: none;
+    margin: 8px 0 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .exp-bullets li {
+    color: var(--mid);
+    font-size: 12.5px;
+    padding-left: 14px;
+    position: relative;
+  }
+
+  .exp-bullets li::before {
+    content: '–';
+    position: absolute;
+    left: 0;
+    color: var(--accent2);
+    font-weight: 700;
+  }
+
+  .project-item {
+    background: #f7f9fb;
+    border-left: 3px solid var(--accent);
+    padding: 14px 16px;
+    border-radius: 0 6px 6px 0;
+  }
+
+  .project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .project-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: 14.5px;
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  .project-result {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--accent2);
+    background: rgba(200,168,75,0.12);
+    padding: 2px 9px;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+
+  .footer-note {
+    font-size: 11px;
+    color: var(--light);
+    border-top: 1px solid var(--rule);
+    padding-top: 16px;
+    font-style: italic;
+  }
+
+  /* Print */
+  @media print {
+    body { background: white; }
+    .page { box-shadow: none; margin: 0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="avatar-ring">EL</div>
+      <div class="sidebar-name">Edgar Lagos</div>
+      <div class="sidebar-title">Sviluppatore Full Stack</div>
+      <div class="divider-gold"></div>
+    </div>
+
+    <!-- Contact -->
+    <div>
+      <div class="sidebar-section-title">Contatto</div>
+      <ul class="contact-list">
+        <li>
+          <span class="ico">📞</span>
+          +34 617 55 57 17
+        </li>
+        <li>
+          <span class="ico">✉</span>
+          edgarlagos.355@gmail.com
+        </li>
+        <li>
+          <span class="ico">in</span>
+          <a href="https://www.linkedin.com/in/edgar-lagos" style="color:rgba(255,255,255,0.85);text-decoration:none">linkedin.com/in/edgar-lagos</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Frontend Skills -->
+    <div>
+      <div class="sidebar-section-title">Frontend</div>
+      <div class="skill-block">
+        <div class="skill-name"><span>React / Next.js</span></div>
+        <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:90%"></div></div>
+      </div>
+      <div class="skill-block" style="margin-top:10px">
+        <div class="skill-name"><span>JavaScript / TypeScript</span></div>
+        <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:88%"></div></div>
+      </div>
+      <div class="skill-block" style="margin-top:10px">
+        <div class="skill-name"><span>Redux</span></div>
+        <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:80%"></div></div>
+      </div>
+      <div class="skill-block" style="margin-top:10px">
+        <div class="skill-name"><span>WordPress / Elementor</span></div>
+        <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:92%"></div></div>
+      </div>
+    </div>
+
+    <!-- Backend / DB Skills -->
+    <div>
+      <div class="sidebar-section-title">Backend & Database</div>
+      <div class="skill-block">
+        <div class="skill-name"><span>PostgreSQL / Sequelize</span></div>
+        <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:78%"></div></div>
+      </div>
+      <div class="skill-block" style="margin-top:10px">
+        <div class="skill-name"><span>MongoDB / Mongoose</span></div>
+        <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:75%"></div></div>
+      </div>
+      <div class="skill-block" style="margin-top:10px">
+        <div class="skill-name"><span>REST APIs / OpenAI / Gemini</span></div>
+        <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:85%"></div></div>
+      </div>
+    </div>
+
+    <!-- Tools -->
+    <div>
+      <div class="sidebar-section-title">Strumenti</div>
+      <div class="tag-list">
+        <span class="tag">Git</span>
+        <span class="tag">Docker</span>
+        <span class="tag">Scrum</span>
+        <span class="tag">Pair Programming</span>
+        <span class="tag">SEO Tecnico</span>
+        <span class="tag">REST API</span>
+      </div>
+    </div>
+
+    <!-- Lingue -->
+    <div>
+      <div class="sidebar-section-title">Lingue</div>
+      <div class="lang-item">
+        <span>Spagnolo</span>
+        <span class="lang-level">Madrelingua</span>
+      </div>
+      <div class="lang-item" style="border-bottom:none">
+        <span>Inglese</span>
+        <span class="lang-level">A2 — In apprendimento</span>
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main">
+
+    <div class="main-header">
+      <h1>Edgar <em>Lagos</em></h1>
+      <div class="role-tag">Sviluppatore Full Stack · Vibe Coder · Integrazione IA</div>
+    </div>
+
+    <!-- Profilo professionale -->
+    <section>
+      <div class="section-title">Profilo Professionale</div>
+      <p class="about-text">
+        Sviluppatore Full Stack con mentalità da <strong>Vibe Coder</strong>, specializzato nel trasformare idee complesse in prodotti funzionali attraverso l'uso strategico dell'IA (OpenAI, Gemini) e lo sviluppo agile. Il mio approccio combina la robustezza di WordPress con architetture JavaScript moderne, privilegiando sempre l'efficienza operativa e un'esperienza utente eccezionale.
+      </p>
+    </section>
+
+    <!-- Obiettivo -->
+    <section>
+      <div class="section-title">Obiettivo Professionale</div>
+      <p class="about-text">
+        Promuovere la trasformazione digitale attraverso lo sviluppo web specializzato e l'implementazione strategica delle API di IA. Il mio obiettivo è generare valore tecnico e funzionale in progetti stimolanti, combinando metodologie agili con gli strumenti più avanzati sul mercato.
+      </p>
+    </section>
+
+    <!-- Esperienza -->
+    <section>
+      <div class="section-title">Esperienza Professionale</div>
+
+      <div class="exp-item">
+        <div class="exp-date">Giu 2023<br>Dic 2024</div>
+        <div class="exp-dot"></div>
+        <div class="exp-body">
+          <div class="exp-company">Solutio World — Agenzia di Marketing</div>
+          <div class="exp-role">Sviluppatore WordPress</div>
+          <div class="exp-desc">
+            Sviluppo e manutenzione di siti web utilizzando WordPress ed Elementor, ottimizzando l'esperienza utente e l'efficienza operativa.
+          </div>
+          <ul class="exp-bullets">
+            <li>Creazione di siti aziendali e landing page ad alta conversione</li>
+            <li>Implementazione di integrazioni personalizzate con API esterne</li>
+            <li>Ottimizzazione delle prestazioni e SEO tecnico</li>
+            <li>Collaborazione con team di digital marketing</li>
+          </ul>
+          <div class="exp-tags">
+            <span class="exp-tag">WordPress</span>
+            <span class="exp-tag">Elementor</span>
+            <span class="exp-tag">SEO Tecnico</span>
+            <span class="exp-tag">REST APIs</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-date">Feb 2023<br>Mag 2023</div>
+        <div class="exp-dot"></div>
+        <div class="exp-body">
+          <div class="exp-company">Üma Salud IA — Stage</div>
+          <div class="exp-role">Sviluppatore Full Stack</div>
+          <div class="exp-desc">
+            Sviluppo frontend per un'applicazione di delivery specializzata nel settore sanitario.
+          </div>
+          <ul class="exp-bullets">
+            <li>Implementazione di interfacce responsive con React e TypeScript</li>
+            <li>Integrazione con API RESTful per la gestione degli ordini in tempo reale</li>
+            <li>Sviluppo di sistemi di monitoraggio e notifiche</li>
+            <li>Lavoro collaborativo sotto metodologia Scrum</li>
+          </ul>
+          <div class="exp-tags">
+            <span class="exp-tag">React</span>
+            <span class="exp-tag">TypeScript</span>
+            <span class="exp-tag">Next.js</span>
+            <span class="exp-tag">Material UI</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-date">Set 2022<br>Nov 2022</div>
+        <div class="exp-dot"></div>
+        <div class="exp-body">
+          <div class="exp-company">Casique Tech — Freelance</div>
+          <div class="exp-role">Sviluppatore Full Stack Jr.</div>
+          <div class="exp-desc">
+            Creazione di pagine web con WordPress e Next.js. Gestione diretta dei clienti e consegna di progetti end-to-end.
+          </div>
+          <ul class="exp-bullets">
+            <li>Implementazione di sistemi di autenticazione (login e signup)</li>
+            <li>Sviluppo di profili utente personalizzati</li>
+            <li>Integrazione di animazioni con Material UI e Animate.css</li>
+            <li>Configurazione dell'architettura Next.js per applicazioni scalabili</li>
+          </ul>
+          <div class="exp-tags">
+            <span class="exp-tag">WordPress</span>
+            <span class="exp-tag">Next.js</span>
+            <span class="exp-tag">Animate.css</span>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Progetti -->
+    <section>
+      <div class="section-title">Progetti In Evidenza</div>
+
+      <div class="project-item">
+        <div class="project-header">
+          <div class="project-name">CMS potenziato dall'IA</div>
+          <div class="project-result">↓ 60% di tempo risparmiato nella creazione di contenuti</div>
+        </div>
+        <div class="exp-desc">Piattaforma WordPress integrata con le API di OpenAI e Gemini per la generazione automatica di contenuti ottimizzati per il SEO.</div>
+        <div class="exp-tags" style="margin-top:8px">
+          <span class="exp-tag">WordPress</span>
+          <span class="exp-tag">JavaScript</span>
+          <span class="exp-tag">OpenAI API</span>
+          <span class="exp-tag">Gemini</span>
+          <span class="exp-tag">SEO</span>
+        </div>
+      </div>
+
+      <div class="project-item" style="margin-top:16px">
+        <div class="project-header">
+          <div class="project-name">Applicazione E-commerce con Next.js</div>
+          <div class="project-result">Core Web Vitals ottimizzati</div>
+        </div>
+        <div class="exp-desc">Piattaforma di e-commerce con architettura moderna: catalogo, carrello, gateway di pagamento e pannello di amministrazione.</div>
+        <div class="exp-tags" style="margin-top:8px">
+          <span class="exp-tag">Next.js</span>
+          <span class="exp-tag">TypeScript</span>
+          <span class="exp-tag">PostgreSQL</span>
+          <span class="exp-tag">Redux</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Educazione -->
+    <section>
+      <div class="section-title">Formazione</div>
+
+      <div class="edu-item">
+        <div class="edu-date">2022</div>
+        <div class="edu-body">
+          <div class="edu-inst">Henry Bootcamp</div>
+          <div class="edu-degree">Sviluppatore Full Stack</div>
+          <div class="edu-desc">
+            Formazione intensiva di oltre 800 ore sulle moderne tecnologie web, database, metodologie agile e buone pratiche di sviluppo.
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <div class="footer-note">Aggiornato a febbraio 2026 · Disponibile per progetti di sviluppo web full stack con focus su IA e trasformazione digitale</div>
+
+  </main>
+
+</div>
+
+</body>
+</html>
