@@ -23,6 +23,20 @@
     "build": "vite build",
     "preview": "vite preview"
   },
+  "overrides": {
+    "react-intersection-observer": {
+      "react": "^19.2.5",
+      "react-dom": "^19.2.5"
+    },
+    "react-type-animation": {
+      "react": "^19.2.5",
+      "react-dom": "^19.2.5"
+    },
+    "react-scroll": {
+      "react": "^19.2.5",
+      "react-dom": "^19.2.5"
+    }
+  },
   "devDependencies": {
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
