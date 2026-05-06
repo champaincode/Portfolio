@@ -1,12 +1,12 @@
 import React from "react";
 import Imagen from "../assets/aboutmee.png";
 
-import CV_en from "../assets/Edgar_Lagos_CV_2026_en.html";
-import CV_es from "../assets/Edgar_Lagos_CV_2026_es.html";
-import CV_ca from "../assets/Edgar_Lagos_CV_2026_ca.html";
-import CV_de from "../assets/Edgar_Lagos_CV_2026_de.html";
-import CV_fr from "../assets/Edgar_Lagos_CV_2026_fr.html";
-import CV_it from "../assets/Edgar_Lagos_CV_2026_it.html";
+import CV_en from "../assets/Edgar_Lagos_CV_2026_en.html?url";
+import CV_es from "../assets/Edgar_Lagos_CV_2026_es.html?url";
+import CV_ca from "../assets/Edgar_Lagos_CV_2026_ca.html?url";
+import CV_de from "../assets/Edgar_Lagos_CV_2026_de.html?url";
+import CV_fr from "../assets/Edgar_Lagos_CV_2026_fr.html?url";
+import CV_it from "../assets/Edgar_Lagos_CV_2026_it.html?url";
 
 //icons
 import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";

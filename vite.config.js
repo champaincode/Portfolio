@@ -52,7 +52,6 @@ const SECURITY_HEADERS = {
 
 export default defineConfig({
   plugins: [react()],
-  assetsInclude: ["**/*.html"],
 
   // ── Servidor de desarrollo ──────────────────────────────
   server: {
